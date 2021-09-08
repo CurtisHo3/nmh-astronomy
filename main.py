@@ -216,6 +216,10 @@ def delete_post(post_id):
     db.session.commit()
     return redirect(url_for('get_all_posts'))
 
+@app.route("/calendar")
+def calendar():
+    return render_template("calendar.html", current_user=current_user)
+
 
 if __name__ == "__main__":
     app.run(debug=True)

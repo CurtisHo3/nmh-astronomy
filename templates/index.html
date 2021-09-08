@@ -9,6 +9,9 @@
           <div class="site-heading">
             <h1>NMH Astronomy</h1>
             <span class="subheading">A collection of random musings.</span>
+            {% if not current_user.is_authenticated: %}
+            <span class="subheading"><br><br><br><br><br><br>Go register or login to create posts now!</span>
+            {% endif %}
           </div>
         </div>
       </div>
